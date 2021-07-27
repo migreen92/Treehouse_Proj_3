@@ -1,0 +1,191 @@
+
+/* Global Layout Set-up */
+* {
+  box-sizing: border-box;
+line-height: 1.5em;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+container, footer{
+max-width: 700px;
+margin: 0 15px;
+}
+
+.intro {
+  padding-top: 15px;
+}
+
+hr {
+    border: none;
+    height: .5px;
+    background-color: black;
+    margin: 2.5px 0;
+}
+
+.break hr:first-child {
+  height: 2.5px;
+}
+
+.break {
+  padding: 30px 0;
+}
+
+header {
+  background-color: #FFA500;
+  height: 75px;
+  display: flex;
+}
+
+header h2 {
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  margin: auto;
+}
+
+h1, h2, h3 {
+  padding: .5em 0;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+.intro {
+  text-align: center;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+form ul li {
+  list-style-type: none;
+  padding: 10px 0;
+}
+.contact li input[type="text"], select{
+  display: block;
+  margin: 10px 0;
+  height: 3.5em;
+}
+li label, footer p {
+  padding: .5em 0;
+  color: darkslategray;
+}
+
+input[type="text"], select,
+textarea {
+  border: none;
+  background-color: rgba(190,190,190, .2);
+  border-radius: 5px;
+  width: 100%;
+  padding: 1em;
+  max-width: 700px;
+  transition:all .25s ease-out;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  background-color: #FFA500;
+  }
+
+input[type="text"]::placeholder
+ {
+  text-align: left;
+  font-style: italic;
+  font-size: 1.2em;
+  color: rgba(190,190,190, .9);
+}
+
+input[id="name"]::placeholder,
+input[id="email"]::placeholder
+ {
+  text-align: right;
+  font-style: italic;
+  font-size: .9em;
+  color: rgba(190,190,190, .9);
+  padding-right: 1.5em;
+}
+
+input[id="zip_code"]{
+  width:50%;
+}
+
+.button {
+  width: 100%;
+  max-width: 700px;
+  border: none;
+  background-color: black;
+  border-radius: 5px;
+  height: 4em;
+  margin: 1em 0;
+}
+
+.button h2 {
+  color:white;
+}
+
+footer {
+    height: 200px;
+}
+
+footer p {
+  font-style: italic;
+  font-weight: 100;
+  text-align: center;
+  margin:auto;
+}
+
+@media screen and (min-width:760px) {
+  container {
+    max-width: 700px;
+    margin:auto;
+    }
+  footer {
+      margin: auto;
+    }
+  .contact li {
+    display: flex;
+    margin: 0 10px;
+    align-items: center;
+  }
+
+  .contact li label {
+    flex-basis: 25%;
+  }
+
+  .contact li input[type="text"], select {
+    flex-basis: 75%;
+  }
+
+  .contact li input[id="zip_code"] {
+    flex-basis: 25%;
+  }
+
+  .break {
+    width: 700px;
+    margin: auto;
+  }
+}
