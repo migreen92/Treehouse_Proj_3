@@ -11,7 +11,6 @@ body {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
   font-size: 1rem;
-  max-width: 700px;
   margin: auto;
 }
 
@@ -87,7 +86,7 @@ form ul li {
   list-style-type: none;
   padding: 10px 0;
 }
-.contact li input[type="text"], select{
+.contact li input[type="text"], input[type="tel"], input[type="email"], select{
   display: block;
   margin: 10px 0;
   height: 3.5em;
@@ -97,7 +96,7 @@ li label, footer p {
   color: darkslategray;
 }
 
-input[type="text"], select,
+input[type="text"], input[type="tel"], input[type="email"], select,
 textarea {
   border: none;
   background-color: rgba(190,190,190, .2);
@@ -109,12 +108,15 @@ textarea {
 }
 
 input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
 select:focus,
 textarea:focus {
   background-color: #FFA500;
   }
 
-input[type="text"]::placeholder
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder
  {
   text-align: left;
   font-style: italic;
@@ -179,7 +181,10 @@ footer p {
     flex-basis: 25%;
   }
 
-  .contact li input[type="text"], select {
+  .contact li input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select {
     flex-basis: 75%;
   }
 
